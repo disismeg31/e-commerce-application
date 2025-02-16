@@ -1,0 +1,46 @@
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.a{
+    color:#35795a;
+    text-decoration:none;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+}
+.a:hover{
+    /* filter: drop-shadow(1px 1px 2px #334e31); */
+    color:#000;
+}
+/*  */
+.logout{
+     display: flex;
+     align-items:center;
+     color:#e65d5d;
+     font-size: larger;
+     cursor: pointer;
+}
+.logout:hover{
+    color:#000;
+}
+/* darktheme */
+.dark .logout{
+    color:#b9ff5e
+}
+.dark .logout:hover{
+    color:#000;
+}
+
+.dark .a{
+    color:#62dfa7;
+}
+
+.dark .a:hover{
+    /* filter: drop-shadow(1px 1px 2px #334e31); */
+    color:#000;
+}

@@ -1,0 +1,18 @@
+.list-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    color: black;
+    background-color: #dfeed3;
+}
+
+.dark .list-container {
+    background-color: #1E201E;
+    color: #ffffffde;
+  }
+   
+ 

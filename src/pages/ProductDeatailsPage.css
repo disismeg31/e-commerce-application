@@ -1,0 +1,57 @@
+.product-details-container{
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+}
+.heading{
+    color: #292828;
+}
+
+.desc{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.stock{
+    color: crimson;
+    font-size: large;
+    font-weight: bold;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.star-color{
+    color: 	#FFD700;
+}
+.back-arrow{
+    width: 100%;
+    color: #292828;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tags-avail{
+    display: flex;
+    justify-content: center;
+}
+
+.badge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    height:25px;
+    width:80px;
+    margin:0px 8px;
+    color: #292828;
+    background-color:#8ba86f85;
+}

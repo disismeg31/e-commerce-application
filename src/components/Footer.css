@@ -1,0 +1,19 @@
+.footer-container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:50px;
+background-color:#adf16e ;
+}
+
+.dark .footer-container{
+    background-color: #555555;
+}
+.para{
+    color:#000000;
+    font-weight:900px;
+}
+
+.dark .para{
+    color:#ffffff;
+}

@@ -1,0 +1,41 @@
+:root {
+  font-family:monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ 
+body {
+  margin: 0;
+  display: flex;
+  /* place-items: center; */
+   min-width: 320px;
+  min-height: 100vh;
+  color: #ffffffde;
+  background-color: #dfeed3;
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  /* width: 100%; */ 
+  /* transition: background-color 0.3s ease; */
+}
+
+/* body .light{
+  color: #ffffffde;
+  background-color: #dfeed3;
+} */
+body.dark {
+  background-color: #1E201E; /* Dark mode */
+  color: #ffffffde;
+}
+ 
+ 
