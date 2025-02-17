@@ -3,11 +3,11 @@ display:flex;
 justify-content:center;
 align-items:center;
 height:50px;
-background-color:#adf16e ;
+background-color:#5dd39e ;
 }
 
 .dark .footer-container{
-    background-color: #555555;
+    background-color: #333333;
 }
 .para{
     color:#000000;
@@ -15,5 +15,5 @@ background-color:#adf16e ;
 }
 
 .dark .para{
-    color:#ffffff;
+    color:#5dd39e;
 }

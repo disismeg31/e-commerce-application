@@ -7,33 +7,34 @@
     font-weight: bolder;
 }
 .a{
-    color:#35795a;
+    color:#3a395a;
     text-decoration:none;
-    font-size: larger;
+    font-size: large;
     display: flex;
     align-items: center;
+    padding: 0px 10px;
 }
 .a:hover{
-    /* filter: drop-shadow(1px 1px 2px #334e31); */
-    color:#000;
+    color:#e65d5d;
 }
-/*  */
 .logout{
      display: flex;
      align-items:center;
-     color:#e65d5d;
-     font-size: larger;
+     color: #3a395a;
+     font-size: large;
      cursor: pointer;
+     padding: 0px 10px;
 }
 .logout:hover{
-    color:#000;
+    color:#e65d5d;;
 }
 /* darktheme */
 .dark .logout{
-    color:#b9ff5e
+    color:#62dfa7;
+    /* color:#b9ff5e */
 }
 .dark .logout:hover{
-    color:#000;
+    color:#0a0a0a;
 }
 
 .dark .a{
@@ -42,5 +43,6 @@
 
 .dark .a:hover{
     /* filter: drop-shadow(1px 1px 2px #334e31); */
-    color:#000;
+    color:#141414;
+    /* color:#b9ff5e */
 }

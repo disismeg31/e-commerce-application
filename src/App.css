@@ -1,15 +1,11 @@
 #root {
-  margin: 0 auto;
-  text-align: center;
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  width: 100vw; /* Full viewport width */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* .main-container{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-} */
  
  
  

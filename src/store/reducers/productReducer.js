@@ -1,5 +1,8 @@
 const initialState = {
-    products:[]
+    products:[],
+    cart:false,
+    placeorder:false,
+    favorite:[],
 }
 
 

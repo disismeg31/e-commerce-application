@@ -16,10 +16,10 @@ function ProductDeatailsPage() {
   return (
     <div className="product-details-container">
       <span className="back-arrow" onClick={()=>navigate(-1)}><FaArrowLeft size={25} /></span>
-      <div className="heading">
+      <div className="product-heading">
         <h1>Product details</h1>
-        <h2>{item.title}</h2>
-        <h2>{item.brand}</h2>
+        <h3>{item.title}</h3>
+        <h3>{item.brand}</h3>
         <img className="image" src={item.images} alt="item image" />
       </div>
       <div className="details">

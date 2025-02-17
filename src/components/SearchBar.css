@@ -21,6 +21,7 @@ input::placeholder{
     font-size: small;
     color: #356d4c;
     margin: .5rem;
+    margin-top: 13px;
 }
 
 .dark .count{

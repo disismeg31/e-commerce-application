@@ -24,7 +24,7 @@ function Layout() {
     // justifyContent:"space-between",
     flexDirection:"column",
     flexWrap:"wrap",
-    width:"100vw",
+    width:"100%",
     height:"100%"
   }
   const footerStyle ={
@@ -35,27 +35,39 @@ function Layout() {
     width: "100%"
   }
   const sidebarStyle={
-    backgroundColor:themeName ==='dark'? "#555555" :"#adf16e",
+    backgroundColor:themeName ==='dark'? "#1E201E" :"#dfeed3",
     width:"180px",
-    // height:"100vh"
+    minHeight: "100vh",
+    borderRight:themeName ==='dark' ? "solid 1px #333333" : "solid 1px rgba(51, 51, 51, 0.2)"
+    // height:"100%"
   }
 
   const headerStyle={
     height:"100px",
     backgroundColor: themeName ==='dark'? "#333333" :"#5dd39e",
+    display:"flex",
+    alignItems:"center",
+     
   }
 
   const outletStyle ={
+    flex: 1,
+    width:"100%",
+    // display:"flex",
+    // justifyContent:"center",
+    // alignItems:"center",
+    boxSizing: "border-box",
     // minHeight: "100vh",
-    // backgroundColor: themeName ==='dark'? "#1E201E" :"#dfeed3",
+    // padding:"40px"
   }
 
   return (
     <div style={containerSt}>
       <div style={headerStyle} ><Header/></div>
+      {/* changed to fix the layout on click of product to align the content in center */}
       <div style={{display:"flex"}}>
       <aside style={sidebarStyle}><Sidebar/></aside>
-      <div className={themeName}  ><Outlet/></div>
+      <div className={themeName} style={outletStyle} ><Outlet/></div>
       </div>
       <div style={footerStyle}><Footer/></div>
     </div>

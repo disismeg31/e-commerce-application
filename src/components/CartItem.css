@@ -1,21 +1,15 @@
-.card-container{
+.cart-item-container{
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:300px;
-    height:350px;
+    background-color: #8ba86f85;
+    width: 400px;
+    height: 300px;
     margin: 10px;
-    background-color: rgba(170, 166, 166, 0.295);
-    /* border-radius: 15px; */
-    padding: 20px;
 }
 img{
     width:200px;
     /* height: 199px;  */
 }
-.heading{
+.prod-heading{
     font-size:large;
     margin: 1px;
     text-align: center;
@@ -51,10 +45,6 @@ button:hover{
     background-color:#8ba86f85;
 }
 
-.product-details{
-    margin-top: 10px;
-    color:#1a1b25;
-}
 
 .dark .product-details{
     color: #ffffffde;

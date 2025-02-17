@@ -3,13 +3,15 @@
     top: 0;  
     z-index: 1000;  
     display:flex;
-    justify-content: space-between;
-    align-items: center;
-    /* width:400px; */
-    height: 60px;
+    justify-content: center;
+    /* align-items: center; */
+    width:100%;
+    /* height: 10px; */
     border-radius: 5px;
-    margin: 10px 20px;
-    padding:10px 20px;
+    /* margin: 10px 20px; */
+    padding: 40px;
+    /* padding:10px 20px; */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 .icons-container{
     display: flex;  
@@ -47,7 +49,7 @@
     margin: 0px  2px;
 }
 .rounded-container-style:hover{
-    color:#0a0a0a;
+    color:#141414;
     background-color: #35795a7a; 
 }
 
@@ -58,6 +60,7 @@
     color:#b9ff5e;
 }
 .dark .rounded-container-style:hover{
-    background-color: #676868;
-    color:#0a0a0a;
+    /* background-color: #676868; */
+    background-color: #b9ff5e;
+    color:#141414;
 }

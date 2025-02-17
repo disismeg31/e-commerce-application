@@ -1,3 +1,9 @@
 .cart-container{
-    height: 100vh;
+    display: flex;
+    margin:40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

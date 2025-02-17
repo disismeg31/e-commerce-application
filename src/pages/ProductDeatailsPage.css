@@ -1,14 +1,18 @@
+
 .product-details-container{
-    margin: 20px;
+    /* margin: auto 20px; */
+    margin:40px;
     padding: 40px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    height: 100vh;
 }
-.heading{
-    color: #292828;
+.product-heading{
+    color: #1a1b25;
+}
+h1{
+    font-size:x-large;
 }
 
 .desc{
@@ -25,6 +29,10 @@
 .details{
     display: flex;
     flex-direction: column;
+    color: #292828;
+}
+.dark .details{
+    color: #ffffff;
 }
  
 .star-color{
@@ -37,6 +45,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+}
+.dark .back-arrow{
+    color: #ffffff;
 }
 
 .tags-avail{
@@ -54,4 +65,9 @@
     margin:0px 8px;
     color: #292828;
     background-color:#8ba86f85;
+}
+
+.dark .badge {
+    color: #ffffff;
+    background-color:#b1ffd485;
 }
