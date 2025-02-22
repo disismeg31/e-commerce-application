@@ -30,8 +30,7 @@ function Sidebar({isSidebarCollapsed}) {
           <span className="sidebar-text">Logout</span>
         }
         </span>
-    </div>
-    //         
+    </div>      
     
   )
 }

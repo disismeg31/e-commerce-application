@@ -4,11 +4,10 @@ import Header from "../components/Header.jsx"
 import Footer from "../components/Footer.jsx"
 import Sidebar from "../components/Sidebar.jsx";
 import { ThemeContext } from "../context/ThemeContextProvider";
-// import { GiHamburgerMenu } from "react-icons/gi";
+
 function Layout() {
   const navigate = useNavigate();
   const { themeName } = useContext(ThemeContext);
-  // const [isSidebarOpen, setSidebarOpen] = useState(false); // Sidebar state
   const [isSidebarCollapsed, setSidebarCollapsed] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -31,9 +30,7 @@ function Layout() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  // const toggleSidebar = () => {
-  //   setSidebarOpen(!isSidebarOpen);
-  // };
+ 
   const containerSt = {
     display:"flex",
     flexDirection:"column",
@@ -62,9 +59,6 @@ function Layout() {
   }
   const sidebarStyle={
     backgroundColor:themeName ==='dark'? "#1E201E" :"#dfeed3",
-    // width:"180px",
-    // width: isSidebarOpen ? "180px" : "70px", // Shrinks on small screens
-    // overflow: "hidden", // Hide content when closed
     width: isSidebarCollapsed ? "70px" : "180px", // Shrink sidebar on small screens
     minHeight: "100vh",
     borderRight:themeName ==='dark' 
@@ -80,7 +74,6 @@ function Layout() {
     boxSizing: "border-box",
     overflowY: "auto",  /* Enables vertical scrolling */
     maxHeight: "calc(100vh - 150px)",
-    // marginLeft: isSidebarOpen ? "0px" : "0px", // Adjust content width
     marginLeft: "0px",
   }
 
@@ -97,16 +90,6 @@ function Layout() {
   return (
     <div style={containerSt}>
       <div style={headerStyle}>
-        {/* <div><GiHamburgerMenu
-         onClick={toggleSidebar}
-         style={{
-          //  display: "none",  // Initially hidden
-           display: window.innerWidth <= 768 ? "block" : "none", // Show on small screens
-           cursor: "pointer",
-           fontSize: "30px",  // Adjust size
-           color: themeName === "dark" ? "#fff" : "#333", // Change color based on theme
-         }}
-        /></div> */}
         <Header/>
         </div>
       <div style={sideNdout}>
