@@ -4,20 +4,15 @@
     z-index: 1000;  
     display:flex;
     justify-content: center;
-    /* align-items: center; */
     width:100%;
-    /* height: 10px; */
     border-radius: 5px;
-    /* margin: 10px 20px; */
-    padding: 40px;
-    /* padding:10px 20px; */
+    padding: 0px 40px;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 .icons-container{
     display: flex;  
     align-items: center;  
     justify-content: center; 
-    /* margin-left: 100px; */
 }
 .icons{
     font-size: large;
@@ -32,8 +27,7 @@
 /* dark theme  */
 .dark .icons {
     background-color: #333333;
-    color:#ffffff;
-
+    color: #F0EFE7;
 }
 .icon{
      margin:2px 0 0 2px;
@@ -60,7 +54,6 @@
     color:#b9ff5e;
 }
 .dark .rounded-container-style:hover{
-    /* background-color: #676868; */
     background-color: #b9ff5e;
     color:#141414;
 }

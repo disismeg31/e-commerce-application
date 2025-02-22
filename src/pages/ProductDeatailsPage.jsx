@@ -20,9 +20,9 @@ function ProductDeatailsPage() {
         <h1>Product details</h1>
         <h3>{item.title}</h3>
         <h3>{item.brand}</h3>
-        <img className="image" src={item.images} alt="item image" />
       </div>
       <div className="details">
+      <img className="image" src={item.images} alt="item image" />
         <span>
         {
           item.rating <=5 && 

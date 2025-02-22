@@ -21,55 +21,67 @@ function Layout() {
 
   const containerSt = {
     display:"flex",
-    // justifyContent:"space-between",
     flexDirection:"column",
     flexWrap:"wrap",
     width:"100%",
-    height:"100%"
+    minHeight:"100vh",
+    padding: "100px 0px",
   }
-  const footerStyle ={
-    backgroundColor:"#adf16e",
-    position: "fixed",
-    left: 0,
-    bottom: 0,
-    width: "100%"
-  }
-  const sidebarStyle={
-    backgroundColor:themeName ==='dark'? "#1E201E" :"#dfeed3",
-    width:"180px",
-    minHeight: "100vh",
-    borderRight:themeName ==='dark' ? "solid 1px #333333" : "solid 1px rgba(51, 51, 51, 0.2)"
-    // height:"100%"
-  }
-
   const headerStyle={
     height:"100px",
     backgroundColor: themeName ==='dark'? "#333333" :"#5dd39e",
     display:"flex",
     alignItems:"center",
-     
+    top:0,
+    right:0,
+    width:"100%",
+    position:"fixed" 
+  }
+  const footerStyle ={
+    backgroundColor:"#adf16e",
+    left: 0,
+    bottom: 0,
+    width: "100%",
+    height:"50px",
+    position:"fixed"
+  }
+  const sidebarStyle={
+    backgroundColor:themeName ==='dark'? "#1E201E" :"#dfeed3",
+    width:"180px",
+    minHeight: "100vh",
+    borderRight:themeName ==='dark' ? "solid 1px #333333" : "solid 1px rgba(51, 51, 51, 0.2)",
   }
 
   const outletStyle ={
     flex: 1,
     width:"100%",
-    // display:"flex",
-    // justifyContent:"center",
-    // alignItems:"center",
+    display:"flex",
+    flexDirection:"column",
     boxSizing: "border-box",
-    // minHeight: "100vh",
-    // padding:"40px"
+    overflowY: "auto",  /* Enables vertical scrolling */
+    maxHeight: "calc(100vh - 150px)",
+  }
+
+  const sideNdout = {
+    display:"flex"
+  }
+
+  const outlinendfooter = {
+    display:'flex',
+    flexDirection:"column",
+    flex: 1,
   }
 
   return (
     <div style={containerSt}>
       <div style={headerStyle} ><Header/></div>
-      {/* changed to fix the layout on click of product to align the content in center */}
-      <div style={{display:"flex"}}>
+      <div style={sideNdout}>
       <aside style={sidebarStyle}><Sidebar/></aside>
+      <div style={outlinendfooter}>
       <div className={themeName} style={outletStyle} ><Outlet/></div>
-      </div>
       <div style={footerStyle}><Footer/></div>
+      </div>
+      </div>
     </div>
   )
 }

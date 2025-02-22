@@ -12,7 +12,9 @@ function Card({item,onDelete}) {
   const {themeName} = useContext(ThemeContext)
   return (
      <ul className={`card-container ${themeName}`}>
+      <div className="img-container">
       <img src={item.images} alt="product" />
+      </div>
       <span><p className="price">{`$${item.price}`}</p></span>
       <li><h2 className='heading'>{item.title}</h2></li>
       {/* <button onClick={()=>onDelete(item.id)} ><MdOutlineDeleteOutline size={25} /></button> */}

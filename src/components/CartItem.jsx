@@ -12,7 +12,7 @@ function CartItem({item}) {
       <img src={item.images} alt="product" />
       <span><p className="price">{`$${item.price}`}</p></span>
       <li><h2 className='prod-heading'>{item.title}</h2></li>
-      <button onClick={()=>deleteFromCart(item.id)} ><MdOutlineDeleteOutline size={25} /></button>
+      <button className='cart-btn' onClick={()=>deleteFromCart(item.id)} ><MdOutlineDeleteOutline size={25} /></button>
     </div>
   )
 }

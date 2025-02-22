@@ -20,7 +20,7 @@ function Login() {
     return(
             <div className='main-container' >
             <div className="login-wrapper">
-            <input className='input-box' ref={usernameInputElement}  name='username'   type="text" placeholder="username"   />
+            <input className='input-box' ref={usernameInputElement}  name='username'  autoComplete="off"  type="text" placeholder="username"   />
             <input className='input-box' ref={passwordInputElement} name='password'   type="password" placeholder="password"  />
             <Btn label="Login" onClick={handleLoginClick}/>
             </div>  

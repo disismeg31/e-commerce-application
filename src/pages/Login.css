@@ -2,12 +2,15 @@
     width: 360px;
     height: 240px;;
     padding: 20px;
-    background-color: #A7D477;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .input-box{
@@ -17,19 +20,29 @@
     padding:  0 10px;
     font-size: medium;
     border-style: none;
-    background-color: #ffffff75;
-    color: rgb(99, 163, 99);
+    background-color: #c5c5c5b7;
+    color: #3a395a;
     border-radius: 5px;
 }
+
 .input-box::placeholder{
-    color: #E46161;
+    color: #3a395a;
+ }
+
+ .input-box:focus{
+    outline: none;
+    background-color: none;
  }
 
  .main-container{
-    height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-image: url('../assets/images/background.svg');
+  background-size:cover;  
+  background-position:center;  
+  background-repeat: no-repeat; 
  }

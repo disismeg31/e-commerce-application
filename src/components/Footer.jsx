@@ -9,7 +9,6 @@ function Footer(){
         <div className={`footer-container ${themeName}`} >
         <p className='para'>@Copyright2025</p>
         </div>
-       
         </>
     )
 }

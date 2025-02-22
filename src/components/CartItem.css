@@ -7,7 +7,6 @@
 }
 img{
     width:200px;
-    /* height: 199px;  */
 }
 .prod-heading{
     font-size:large;
@@ -28,7 +27,7 @@ img{
     color: #1a1b25;
 }
 
-button{
+.cart-btn{
     border-style: none;
     /* width: 40px; */
     height: 40px;
@@ -41,12 +40,12 @@ button{
     align-items: center;
     margin-top: 10px;
 }
-button:hover{
+.cart-btn:hover{
     background-color:#8ba86f85;
 }
 
 
-.dark .product-details{
+/* .dark .product-details{
     color: #ffffffde;
 }
 
@@ -56,4 +55,4 @@ button:hover{
 
 .dark .price{
     color: #ffffffde;
-}
+} */

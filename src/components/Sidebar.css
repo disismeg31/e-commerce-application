@@ -7,7 +7,7 @@
     font-weight: bolder;
 }
 .a{
-    color:#3a395a;
+    color: #292828;
     text-decoration:none;
     font-size: large;
     display: flex;
@@ -20,7 +20,7 @@
 .logout{
      display: flex;
      align-items:center;
-     color: #3a395a;
+     color: #292828;
      font-size: large;
      cursor: pointer;
      padding: 0px 10px;
@@ -29,20 +29,17 @@
     color:#e65d5d;;
 }
 /* darktheme */
-.dark .logout{
-    color:#62dfa7;
-    /* color:#b9ff5e */
+.dark .logout{ 
+    color: #525252;
 }
 .dark .logout:hover{
-    color:#0a0a0a;
+    color:#b9ff5e;  
 }
 
 .dark .a{
-    color:#62dfa7;
+    color: #525252;
 }
 
 .dark .a:hover{
-    /* filter: drop-shadow(1px 1px 2px #334e31); */
-    color:#141414;
-    /* color:#b9ff5e */
+    color:#b9ff5e;
 }
