@@ -1,23 +1,24 @@
 .sidebar-container{
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 0px;
     padding: 10px;
     font-size: larger;
     font-weight: bolder;
+    /* width: 180px; Default width */
 }
-.a{
+.a.sidebar-item{
     color: #292828;
     text-decoration:none;
     font-size: large;
     display: flex;
     align-items: center;
-    padding: 0px 10px;
+    padding: 10px 10px;
 }
 .a:hover{
     color:#e65d5d;
 }
-.logout{
+.logout.sidebar-item{
      display: flex;
      align-items:center;
      color: #292828;
@@ -43,3 +44,21 @@
 .dark .a:hover{
     color:#b9ff5e;
 }
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .sidebar-container.shrunk {
+    width: 70px; /* Shrink to icon size */
+    
+  }
+  
+  .sidebar-container.shrunk .sidebar-text {
+    display: none; /* Hide text when shrunk */
+  }
