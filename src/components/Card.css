@@ -6,7 +6,7 @@
     width:300px;
     height:350px;
     margin: 10px;
-    background-color: rgba(170, 166, 166, 0.295);
+    background-color: #aaa6a64b;
     padding: 20px;
 }
 .img-container{
@@ -35,7 +35,7 @@ img{
     color: #1a1b25;
 }
 
-button{
+.card-button{
     border-style: none;
     height: 40px;
     border-radius: 5px;
@@ -47,8 +47,8 @@ button{
     align-items: center;
     margin-top: 10px;
 }
-button:hover{
-    background-color:#8ba86f85;
+.card-button:hover{
+    border: 1px solid #1a1b25;
 }
 
 .product-details{
@@ -56,17 +56,21 @@ button:hover{
 }
 
 .dark .card-container{
-    background-color: rgba(80, 78, 78, 0.295);
+    background-color: #504e4e4b;
 }
 
 .dark .product-details{
-    color: #ffffffde;
+    color: #F0EFE7;
 }
 
 .dark .heading{
-    color: #ffffffde;
+    color: #F0EFE7;
 }
 
 .dark .price{
-    color: #ffffffde;
+    color: #F0EFE7;
+}
+
+.dark .card-button:hover{
+    border: none;
 }

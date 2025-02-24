@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 .product-heading{
-    color: #292828;
+    color: #1a1b25;
 }
 .dark .product-heading{
     color: #F0EFE7;
@@ -32,7 +32,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #292828;
+    color: #1a1b25;
 }
 .dark .details{
     color: #F0EFE7;
@@ -43,7 +43,7 @@ h3{
 }
 .back-arrow{
     width: 100%;
-    color: #292828;
+    color: #1a1b25;
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
@@ -64,14 +64,13 @@ h3{
     align-items: center;
     border-radius: 50px;
     height:25px;
-    /* width:80px; */
     margin:0px 8px;
-    padding: 5px 20px;
-    color: #292828;
-    background-color:#8ba86f85;
+    padding: 1px 10px;
+    color: #1a1b25;
+    border:1px dashed #1a1b25;
 }
 
 .dark .badge {
     color: #F0EFE7;
-    background-color:#b1ffd485;
+    border:1px dashed #F0EFE7;
 }

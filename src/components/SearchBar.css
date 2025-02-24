@@ -5,7 +5,7 @@
     border-style: none;
     border-radius: 5px;
     padding: 5px;
-    color:#adf16e ;
+    color:#3a395a ;
     background-color:#FFFDEC ;
 }
 input::placeholder{
@@ -28,15 +28,15 @@ input::placeholder{
 }
 
 .dark .searchB{
-    color:#adf16e ;
+    color:#5dd39e ;
     background-color:#141414 ;
 }
 
 .dark input::placeholder{
-    color:#adf16e ;
+    color:#5dd39e ;
 }
 
 .dark .searchB:focus{
     outline: none;
-    border:1px solid #adf16e;
+    border:1px solid #5dd39e;
 }

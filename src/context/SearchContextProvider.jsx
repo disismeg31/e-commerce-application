@@ -12,23 +12,48 @@ function SearchContextProvider({children}) {
 
     const List = useSelector(state=>state.products.products);
     const addToCart = (id) =>{
-      const itemToAdd = List.filter((item)=>(item.id === id))
+      if(cart.some((item)=>item.id === id)){
+        console.log('You already have this item in the cart')
+      }
+      else{
+      const itemToAdd = List.find((item)=>(item.id === id))
       console.log(itemToAdd)
-      setCart([...cart,itemToAdd])
+      if(itemToAdd){
+      setCart((cart)=>[...cart,{...itemToAdd,quantity:1}])
+      }
+      
+      }
     }
 
     const deleteFromCart = (id)=>{
-      const newCartList = List.filter((item)=>(
+      const newCartList = cart.filter((item)=>(
          item.id!==id
       ));
       setCart(newCartList)
     }
+    const handleQty = (id,operation)=>{
+       setCart((c)=> (
+        c.map((item)=>
+        item.id === id ?
+        {...item,
+          quantity: operation==="i"? item.quantity+1 : Math.max(1,item.quantity-1)
+        }:
+        item
+        
+       ))
+       )
+    }
+
+    const getTotalCartItem = () =>cart.length;
+    
     const data = {
         searchText,
         setSearchText,
         cart,
         addToCart,
-        deleteFromCart
+        deleteFromCart,
+        handleQty,
+        getTotalCartItem
     }
   return (
      <SearchContext.Provider value={data}>

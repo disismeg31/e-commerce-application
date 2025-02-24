@@ -5,10 +5,9 @@
     padding: 10px;
     font-size: larger;
     font-weight: bolder;
-    /* width: 180px; Default width */
 }
 .a.sidebar-item{
-    color: #292828;
+    color: #1a1b25;
     text-decoration:none;
     font-size: large;
     display: flex;
@@ -21,13 +20,13 @@
 .logout.sidebar-item{
      display: flex;
      align-items:center;
-     color: #292828;
+     color: #1a1b25;
      font-size: large;
      cursor: pointer;
      padding: 0px 10px;
 }
 .logout:hover{
-    color:#e65d5d;;
+    color:#e65d5d;
 }
 /* darktheme */
 .dark .logout{ 

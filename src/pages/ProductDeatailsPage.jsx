@@ -1,9 +1,11 @@
-import {useEffect} from 'react';
+import {useEffect,useContext} from 'react';
 import { useLocation,useNavigate } from "react-router-dom"; 
 import { FaStar } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
+import { SearchContext } from '../context/SearchContextProvider.jsx';
 import './ProductDeatailsPage.css'
 function ProductDeatailsPage() {
+  const {addToCart} = useContext(SearchContext);
   const location = useLocation();
   const navigate = useNavigate();
   const item = location.state?.item;//retrieve the item object
@@ -38,7 +40,7 @@ function ProductDeatailsPage() {
         ))}
         </div>
         <span className="stock" >{item.stock}Left - {item.availabilityStatus}</span>
-        <button>Add to Cart</button>
+        <button className='card-button' onClick={()=>{addToCart(item.id)}}>Add to Cart</button>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 
-import {createContext,useState,useEffect}from 'react';
+import {createContext,useState}from 'react';
 export const  ThemeContext = createContext();
  
 
@@ -15,15 +15,6 @@ function ThemeContextProvider({children}) {
     }
   };
 
-  // useEffect(() => {
-  //   // Apply the dark class directly on the body
-  //   if (themeData.themeName === "dark") {
-  //     document.body.classList.add("dark");
-  //   } else {
-  //     document.body.classList.remove("dark");
-  //   }
-  //   // document.body.className = themeData.themeName;
-  // }, [themeData.themeName]);
   return (
     <ThemeContext.Provider value={themeData}>
         {children}

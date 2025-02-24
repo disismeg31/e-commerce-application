@@ -6,14 +6,19 @@ import { FaArrowLeft } from "react-icons/fa6";
 import CartItem from '../components/CartItem.jsx'
 function CartPage() {
   const {cart} = useContext(SearchContext);
+   
   const navigate = useNavigate();
   return (
     <div className='cart-container'>
       <span className="back-arrow" onClick={()=>navigate(-1)}><FaArrowLeft size={25} /></span>
-      {/* <Card/> */}
-      {cart.map((item)=>(
+      { 
+      cart.length>0 ? 
+      (cart.map((item)=>(
         <CartItem key={item.id} item={item}/>
-      ))}
+      )))
+      :
+      (<p className=''>No items in the cart</p>)
+    }
     </div>
   )
 }

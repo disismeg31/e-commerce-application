@@ -12,6 +12,7 @@ import productStore from "./store/index.js";
 import CartPage from './pages/CartPage.jsx'
 import ProductDeatailsPage from './pages/ProductDeatailsPage.jsx'
 import ProfilePage from './pages/ProfilePage.jsx';
+
 function App() {
   return (
     <>
@@ -28,7 +29,7 @@ function App() {
               <Route path="profile" element={<ProfilePage/>} />
               <Route path="product/:id" element={<ProductDeatailsPage/>}/>
         </Route>
-        <Route path="*" element={<Home/>} />
+        <Route path="**" element={<Home/>} />
       </Routes>
        
     </Router>

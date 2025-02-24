@@ -6,7 +6,6 @@ import { SearchContext } from "../context/SearchContextProvider";
 
 function SearchBar( ) {
   const {searchText,setSearchText} = useContext(SearchContext)
-  // const [searchText, setSearchText] = useState("");
   const [count,setCount] = useState(0)
    useEffect(()=>{
     if(searchText.trim().length>0){
@@ -18,7 +17,6 @@ function SearchBar( ) {
   const handleInputChange = (e) => {
     const val = e.target.value;
     setSearchText(val);
-    // onSearch(val);
   };
   return (
     <>

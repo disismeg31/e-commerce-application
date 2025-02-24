@@ -12,6 +12,13 @@ function Sidebar({isSidebarCollapsed}) {
   
   const nav = useNavigate()
    const handleLogout =()=>{
+    // Remove specific session storage item  
+    // sessionStorage.removeItem("userData");
+    // sessionStorage.removeItem("Mytoken");
+
+    // Clear all session storage data
+    // sessionStorage.clear();
+
     nav('/')
    }
   return (
