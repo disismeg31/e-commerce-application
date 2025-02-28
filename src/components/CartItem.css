@@ -51,6 +51,21 @@ img{
     background-color: transparent;
     color: #1a1b25;
     padding: 0;
+    cursor: pointer;
+}
+.cart-placeorder-btn{
+    padding: 0;
+    border-style: none;
+    height: 30px;
+    border-radius: 5px;
+    background-color:transparent;
+    text-decoration: underline;
+    color: #1a1b25;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
 }
 
 .dark .prod-heading{
@@ -70,4 +85,7 @@ img{
     background-color: #504e4e4b;
 }
 
+.dark .cart-placeorder-btn{
+    color:#F0EFE7
+}
  

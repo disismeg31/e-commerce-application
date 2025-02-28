@@ -4,7 +4,7 @@ import Card from './Card.jsx'
 import './List.css'
 import { SearchContext } from '../context/SearchContextProvider.jsx';
 import {useSelector,useDispatch} from 'react-redux';
-import {setProductList,removeProduct} from '../store/actions/productActions.js'
+import {setProductList} from '../store/actions/productActions.js'
 import {ThemeContext} from '../context/ThemeContextProvider';
 import { fetchProducts } from '../services/apiService.js';
 
@@ -25,10 +25,18 @@ function List() {
     };
     getProducts();
   },[dispatch])
+
+  // useEffect(()=>{
+  //   const listContainer = document.querySelector(".list-container");
+
+  //   if (listContainer && listContainer.children.length <= 5) {
+  //     listContainer.style.justifyContent = "flex-start";
+  //   } else {
+  //     listContainer.style.justifyContent = "space-evenly"; // Reset for multiple items
+  //   }
+  // },[searchText])
    
-  const handleDelete=(id)=>{
-     dispatch(removeProduct(id))
-  }
+  
 
   const filteredList = defaultList.filter((item)=>
     item?.title?.toLowerCase().includes(searchText.toLowerCase())
@@ -41,7 +49,7 @@ function List() {
       {
         displayList.length>0 ? (
           displayList.map((item)=>(
-            <Card key={item.id} item={item} onDelete={handleDelete}/>
+            <Card key={item.id} item={item}/>
            )
         ))  
       :

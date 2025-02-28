@@ -12,6 +12,7 @@ import productStore from "./store/index.js";
 import CartPage from './pages/CartPage.jsx'
 import ProductDeatailsPage from './pages/ProductDeatailsPage.jsx'
 import ProfilePage from './pages/ProfilePage.jsx';
+import OrderPlaced from './pages/OrderPlaced.jsx';
 
 function App() {
   return (
@@ -29,9 +30,10 @@ function App() {
               <Route path="profile" element={<ProfilePage/>} />
               <Route path="product/:id" element={<ProductDeatailsPage/>}/>
         </Route>
+        <Route path="/checkoutorderplaced" element={<OrderPlaced/>} />
         <Route path="**" element={<Home/>} />
       </Routes>
-       
+      
     </Router>
     </SearchContextProvider>
     </ThemeContextProvider>

@@ -13,7 +13,7 @@ function SearchBar( ) {
     }
      console.log(searchText)
    },[searchText])
-
+  
   const handleInputChange = (e) => {
     const val = e.target.value;
     setSearchText(val);

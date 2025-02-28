@@ -14,10 +14,14 @@ function Home() {
       const timer = setTimeout(()=>{
         setIsLoading(false);
       },1000);
-
+      
       //cleanup the timer
       return()=> clearTimeout(timer);
 
+    }
+    else{
+      // to set the loader to false when we backspace the entered text
+      setIsLoading(false);
     }
 },[searchText])
 

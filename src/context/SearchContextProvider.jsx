@@ -2,13 +2,14 @@
 /* eslint-disable react/prop-types */
 import {createContext,useState}from 'react';
 import {useSelector} from 'react-redux';
-
+ 
 
 export const SearchContext = createContext();
 
 function SearchContextProvider({children}) {
     const [searchText, setSearchText] = useState("");
     const [cart,setCart]=useState([]);
+    
 
     const List = useSelector(state=>state.products.products);
     const addToCart = (id) =>{
@@ -53,7 +54,8 @@ function SearchContextProvider({children}) {
         addToCart,
         deleteFromCart,
         handleQty,
-        getTotalCartItem
+        getTotalCartItem,
+        
     }
   return (
      <SearchContext.Provider value={data}>

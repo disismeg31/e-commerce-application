@@ -1,13 +1,23 @@
 .list-container{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+     
+    /* width: calc(100% - 30px); */
     justify-content:space-evenly;
     align-items: center;
+    /* margin: 10px; */
     padding: 10px;
     border-radius: 5px;
     color: #292828;
     background-color: #dfeed3;
 }
+
+ 
+/* .list-container:has(:only-child) {
+    justify-content: flex-start;
+} */
+ /* since the has doesnt work we use js to manipulate the stylng conditionaly */
 
 .dark .list-container {
     background-color: #1E201E;
