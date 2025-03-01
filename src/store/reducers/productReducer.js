@@ -2,7 +2,8 @@ const initialState = {
     products:[],
     cartItems:[],
     cartCount:0,
-    totalAmount:0
+    totalAmount:0,
+    user:false,
 }
 
 
@@ -86,6 +87,12 @@ switch(action.type){
                 totalAmount:totalAmt
             }
     }
+
+    case 'SET_USER_LOGIN':
+         return{
+            ...state,
+            user:action.payload
+         }
 
     default:
       return state; 

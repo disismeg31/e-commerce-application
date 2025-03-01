@@ -6,11 +6,13 @@ import { useNavigate } from "react-router-dom";
 import { MdLogout } from "react-icons/md";
 import {ThemeContext} from '../context/ThemeContextProvider';
 import { MdDashboard } from "react-icons/md";
+import { useDispatch} from 'react-redux';
+import { userLogin } from '../store/actions/productActions';
 
 function Sidebar({isSidebarCollapsed}) {
     const { themeName } = useContext(ThemeContext);
-  
-  const nav = useNavigate()
+    const dispatch = useDispatch();
+    const nav = useNavigate()
    const handleLogout =()=>{
     // Remove specific session storage item  
     // sessionStorage.removeItem("userData");
@@ -18,7 +20,7 @@ function Sidebar({isSidebarCollapsed}) {
 
     // Clear all session storage data
     // sessionStorage.clear();
-
+    dispatch(userLogin(false))
     nav('/')
    }
   return (

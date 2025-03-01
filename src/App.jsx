@@ -13,6 +13,7 @@ import CartPage from './pages/CartPage.jsx'
 import ProductDeatailsPage from './pages/ProductDeatailsPage.jsx'
 import ProfilePage from './pages/ProfilePage.jsx';
 import OrderPlaced from './pages/OrderPlaced.jsx';
+import ProtectedRoutes from './services/ProtectedRoutes.jsx';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
        
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route element={<ProtectedRoutes/>}>
         <Route path="/home" element={<Layout/>}>
               <Route  index element={<Home/>}/>
               <Route path="cart" element={<CartPage/>} />
@@ -32,6 +34,7 @@ function App() {
         </Route>
         <Route path="/checkoutorderplaced" element={<OrderPlaced/>} />
         <Route path="**" element={<Home/>} />
+        </Route>
       </Routes>
       
     </Router>

@@ -4,16 +4,19 @@ import Btn from '../components/Btn.jsx';
 import './Login.css';
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
-import axios from 'axios';
+// import axios from 'axios';
 import {Alert,Snackbar} from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../store/actions/productActions.js';
 function Login() {
     const [isVisible,setIsVisible] = useState(false);
     const [open, setOpen] = useState(false);
+    // const [errorOpen,setErrorOpen]= useState(false);
     const usernameInputElement = useRef();
     const passwordInputElement = useRef();
     const navigate = useNavigate();
-    
+    const dispatch =  useDispatch()
     const handleLoginClick = () => {
         // const payload = {
         //     username:usernameInputElement.current.value,
@@ -41,12 +44,15 @@ function Login() {
             setTimeout(() => { 
                 navigate("/home"); // Navigate after showing the alert
             }, 1000); // 2-second delay
+            dispatch(userLogin(true));
             console.log(usernameInputElement.current.value,passwordInputElement.current.value)
         }
         else{
-            alert('incorrect username👤 & password🔑');
+            
+            // alert('incorrect username👤 & password🔑');
             usernameInputElement.current.value="";
             passwordInputElement.current.value="";
+            // setErrorOpen(true)
         }  
     };  
     return(
@@ -65,6 +71,13 @@ function Login() {
             <span className='forgot-password' >forgot password?</span>
             </div>
             </div>  
+
+            {/* <Snackbar open={errorOpen} autoHideDuration={2000} onClose={() => setOpen(false)} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
+                <Alert icon={<CheckIcon fontSize="inherit" />}  severity="warning">
+                 Login Unsuccessful incorrect username👤 & password🔑
+                </Alert>
+            </Snackbar>  */}
+
             <Snackbar open={open} autoHideDuration={2000} onClose={() => setOpen(false)} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
                 <Alert icon={<CheckIcon fontSize="inherit" />}  severity="success">
                  Login successful.

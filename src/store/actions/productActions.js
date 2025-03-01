@@ -23,3 +23,7 @@ export const placeOrder = (id) =>({
     payload:id
 })
 
+export const userLogin =(val)=>({
+    type:'SET_USER_LOGIN',
+    payload:val
+})
