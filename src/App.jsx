@@ -12,9 +12,12 @@ import productStore from "./store/index.js";
 import CartPage from './pages/CartPage.jsx'
 import ProductDeatailsPage from './pages/ProductDeatailsPage.jsx'
 import ProfilePage from './pages/ProfilePage.jsx';
-import OrderPlaced from './pages/OrderPlaced.jsx';
+// import OrderPlaced from './pages/OrderPlaced.jsx';
 import ProtectedRoutes from './services/ProtectedRoutes.jsx';
-
+import { ErrorBoundary } from 'react-error-boundary';
+import {lazy,Suspense} from 'react';
+const OrderPlaced = lazy(()=> import('./pages/OrderPlaced.jsx'))
+// so we have to learn about suspence and error boundaries and skeltons so i paused this
 function App() {
   return (
     <>
@@ -32,7 +35,13 @@ function App() {
               <Route path="profile" element={<ProfilePage/>} />
               <Route path="product/:id" element={<ProductDeatailsPage/>}/>
         </Route>
-        <Route path="/checkoutorderplaced" element={<OrderPlaced/>} />
+        <Route path="/checkoutorderplaced" element={
+          <Suspense fallback='Loading....'>
+          <OrderPlaced/>
+          </Suspense>
+          } 
+        />
+        {/* <Route path="/checkoutorderplaced" element={<OrderPlaced/>}/> */}
         <Route path="**" element={<Home/>} />
         </Route>
       </Routes>

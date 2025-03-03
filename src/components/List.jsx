@@ -44,8 +44,13 @@ function List() {
  
   const displayList = searchText ? filteredList : defaultList;
 
+  // Determine the class for layout based on the number of items
+const containerClass = displayList.length <= 3 ? 'align-start' : 'space-evenly';
+// Add dark mode class based on the themeName (dark or light)
+const darkModeClass = themeName === 'dark' ? 'dark' : '';
+
   return (
-    <div className={`list-container ${themeName}`}>
+    <div  className={`list-container ${darkModeClass} ${containerClass}`}>
       {
         displayList.length>0 ? (
           displayList.map((item)=>(

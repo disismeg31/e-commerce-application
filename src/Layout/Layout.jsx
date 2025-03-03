@@ -74,7 +74,6 @@ function Layout() {
     boxSizing: "border-box",
     overflowY: "auto",  /* Enables vertical scrolling */
     maxHeight: "calc(100vh - 150px)",
-    marginLeft: "0px",
   }
 
   const sideNdout = {

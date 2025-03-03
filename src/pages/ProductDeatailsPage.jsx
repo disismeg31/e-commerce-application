@@ -1,13 +1,19 @@
-import {useEffect,useContext} from 'react';
+import {useEffect} from 'react';
 import { useLocation,useNavigate } from "react-router-dom"; 
 import { FaStar } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
-import { SearchContext } from '../context/SearchContextProvider.jsx';
+// import { SearchContext } from '../context/SearchContextProvider.jsx';
 import './ProductDeatailsPage.css'
+import {useDispatch} from 'react-redux';
+import {addToCartProduct} from '../store/actions/productActions.js';
+
 function ProductDeatailsPage() {
-  const {addToCart} = useContext(SearchContext);
+  // using use Context
+  // const {addToCart} = useContext(SearchContext);
   const location = useLocation();
   const navigate = useNavigate();
+  // using redux
+  const dispatch =useDispatch();
   const item = location.state?.item;//retrieve the item object
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -40,7 +46,8 @@ function ProductDeatailsPage() {
         ))}
         </div>
         <span className="stock" >{item.stock}Left - {item.availabilityStatus}</span>
-        <button className='card-button' onClick={()=>{addToCart(item.id)}}>Add to Cart</button>
+        {/* <button className='card-button' onClick={()=>{addToCart(item.id)}}>Add to Cart</button> */}
+        <button className='card-button' onClick={()=>{dispatch(addToCartProduct(item.id))}}>Add to Cart</button>
       </div>
     </div>
   )

@@ -13,15 +13,19 @@
     background-color: #dfeed3;
 }
 
- 
-/* .list-container:has(:only-child) {
-    justify-content: flex-start;
-} */
- /* since the has doesnt work we use js to manipulate the stylng conditionaly */
-
 .dark .list-container {
     background-color: #1E201E;
     color: #ffffffde;
   }
    
+/* For the case when the number of items is small (1 to 3) */
+.list-container.align-start {
+    justify-content: flex-start; /* Align items to the start when there are few items */
+  }
+  
+  /* For more than 3 items, use the default space-evenly */
+  .list-container.space-evenly {
+    justify-content: space-evenly;
+  }
+ 
  

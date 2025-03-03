@@ -25,7 +25,7 @@ function CartPage() {
         <CartItem key={item.id} item={item}/>
       )))
       :
-      (<p className=''>No items in the cart</p>)
+      (<p className='no-item'>No items in the cart</p>)
     }
     {
       cart.length>0 &&

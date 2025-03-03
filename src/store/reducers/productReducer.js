@@ -27,7 +27,7 @@ switch(action.type){
         const addedProduct = state.products.find(product => product.id === action.payload);
         if (!addedProduct) return state; // Product not found returning the current state bc nothing was changed
         const updatedCart = [...state.cartItems, { ...addedProduct, cart: true,quantity:1 }];
-            console.log(updatedCart)
+        console.log(updatedCart)
         // Calculate total amount
         const totalAmt = Math.floor(updatedCart.reduce((sum, item) => sum + item.price * item.quantity, 0));
 

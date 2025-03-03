@@ -37,3 +37,10 @@
 .placeorder-btn:hover{
     border: 1px solid #1a1b25;
 }
+
+.no-item{
+    color: #1a1b25;
+}
+.dark .no-item{
+    color: #F0EFE7;
+}
