@@ -1,6 +1,5 @@
 // import {useContext,useEffect} from 'react';
 import  ThemeContextProvider  from './context/ThemeContextProvider.jsx';
-// import { ThemeContext } from './context/ThemeContextProvider';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
@@ -14,7 +13,7 @@ import ProductDeatailsPage from './pages/ProductDeatailsPage.jsx'
 import ProfilePage from './pages/ProfilePage.jsx';
 // import OrderPlaced from './pages/OrderPlaced.jsx';
 import ProtectedRoutes from './services/ProtectedRoutes.jsx';
-import { ErrorBoundary } from 'react-error-boundary';
+// import { ErrorBoundary } from 'react-error-boundary';
 import {lazy,Suspense} from 'react';
 const OrderPlaced = lazy(()=> import('./pages/OrderPlaced.jsx'))
 // so we have to learn about suspence and error boundaries and skeltons so i paused this
@@ -42,7 +41,7 @@ function App() {
           } 
         />
         {/* <Route path="/checkoutorderplaced" element={<OrderPlaced/>}/> */}
-        <Route path="**" element={<Home/>} />
+        <Route path="*/*" element={<Home/>} />
         </Route>
       </Routes>
       

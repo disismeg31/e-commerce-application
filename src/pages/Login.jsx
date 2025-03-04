@@ -1,4 +1,4 @@
-import {useRef,useState} from 'react';
+import {useRef,useState,useCallback} from 'react';
 import { useNavigate } from "react-router-dom";
 import Btn from '../components/Btn.jsx';
 import './Login.css';
@@ -17,27 +17,8 @@ function Login() {
     const passwordInputElement = useRef();
     const navigate = useNavigate();
     const dispatch =  useDispatch()
-    const handleLoginClick = () => {
-        // const payload = {
-        //     username:usernameInputElement.current.value,
-        //     password:passwordInputElement.current.value
-        // }
-        // axios.post("https://dummyjson.com/auth/login",payload,
-        //     {
-        //         headers: { "Content-Type": "application/json" },
-        //         withCredentials: true // Ensures cookies (if any) are included
-        //     }
-        // )
-        //      .then((res)=>{
-        //     sessionStorage.setItem("userData",JSON.stringify(res.data));
-        //     sessionStorage.setItem("accessToken", res.data.accessToken);
-        //     sessionStorage.setItem("Mytoken",res.data.token);
-        //     navigate("/home");
-        // })
-        // .catch((error) => {
-        //     console.error("Login error:", error);
-        //     alert("Login failed. Please check your credentials.");
-        // });
+
+    const handleLoginClick = useCallback(() => {
         if(usernameInputElement.current.value === "meg@123" && passwordInputElement.current.value === "123"){
             // navigate("/home"); // Navigate to the home page
             setOpen(true);
@@ -49,12 +30,13 @@ function Login() {
         }
         else{
             
-            // alert('incorrect username👤 & password🔑');
+            alert('incorrect username👤 & password🔑');
             usernameInputElement.current.value="";
             passwordInputElement.current.value="";
             // setErrorOpen(true)
         }  
-    };  
+    },[navigate, dispatch]);
+    console.log("login");
     return(
             <div className='main-container' >
             <div className="login-wrapper">
@@ -71,12 +53,6 @@ function Login() {
             <span className='forgot-password' >forgot password?</span>
             </div>
             </div>  
-
-            {/* <Snackbar open={errorOpen} autoHideDuration={2000} onClose={() => setOpen(false)} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
-                <Alert icon={<CheckIcon fontSize="inherit" />}  severity="warning">
-                 Login Unsuccessful incorrect username👤 & password🔑
-                </Alert>
-            </Snackbar>  */}
 
             <Snackbar open={open} autoHideDuration={2000} onClose={() => setOpen(false)} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
                 <Alert icon={<CheckIcon fontSize="inherit" />}  severity="success">

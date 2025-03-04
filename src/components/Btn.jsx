@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-
+import React from 'react'
 import './Btn.css'
 function Btn({label,onClick}) {
-    
+    console.log(`Rendering Btn: ${label}`); // Logs every render
     return(
         
             
@@ -11,4 +11,4 @@ function Btn({label,onClick}) {
     )
 }
 
-export default Btn;
+export default  React.memo(Btn);
