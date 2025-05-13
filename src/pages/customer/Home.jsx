@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
- import { useState,useEffect, useContext } from 'react'
-import Progress from '../components/Progress.jsx'
-import List from '../components/List.jsx'
-import { SearchContext } from '../context/SearchContextProvider.jsx';
+import { useState,useEffect, useContext } from 'react'
+import Progress from '../../components/Progress.jsx'
+import List from '../../components/List.jsx'
+import { SearchContext } from '../../context/SearchContextProvider.jsx';
 function Home() {
   const {searchText} =useContext(SearchContext)
   const [isLoading,setIsLoading] = useState(false);

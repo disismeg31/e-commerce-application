@@ -5,7 +5,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 // import { SearchContext } from '../context/SearchContextProvider.jsx';
 import './ProductDeatailsPage.css'
 import {useDispatch} from 'react-redux';
-import {addToCartProduct} from '../store/actions/productActions.js';
+import {addToCartProduct} from '../../store/actions/productActions.js';
 
 function ProductDeatailsPage() {
   // using use Context

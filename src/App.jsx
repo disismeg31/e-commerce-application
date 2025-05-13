@@ -1,21 +1,21 @@
 // import {useContext,useEffect} from 'react';
 import  ThemeContextProvider  from './context/ThemeContextProvider.jsx';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Home from './pages/Home.jsx';
-import Login from './pages/Login.jsx';
+import Home from './pages/customer/Home.jsx';
+import Login from './pages/customer/Login.jsx';
 import './App.css';
 import SearchContextProvider from "./context/SearchContextProvider.jsx";
 import Layout from './Layout/Layout.jsx';
 import { Provider } from 'react-redux';
 import productStore from "./store/index.js";
-import CartPage from './pages/CartPage.jsx'
-import ProductDeatailsPage from './pages/ProductDeatailsPage.jsx'
-import ProfilePage from './pages/ProfilePage.jsx';
-// import OrderPlaced from './pages/OrderPlaced.jsx';
+import CartPage from './pages/customer/CartPage.jsx'
+import ProductDeatailsPage from './pages/customer/ProductDeatailsPage.jsx'
+import ProfilePage from './pages/customer/ProfilePage.jsx';
+// import OrderPlaced from './pages/customer/OrderPlaced.jsx';
 import ProtectedRoutes from './services/ProtectedRoutes.jsx';
 // import { ErrorBoundary } from 'react-error-boundary';
 import {lazy,Suspense} from 'react';
-const OrderPlaced = lazy(()=> import('./pages/OrderPlaced.jsx'))
+const OrderPlaced = lazy(()=> import('./pages/customer/OrderPlaced.jsx'))
 // so we have to learn about suspence and error boundaries and skeltons so i paused this
 function App() {
   return (

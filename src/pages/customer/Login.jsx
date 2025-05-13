@@ -1,6 +1,6 @@
 import {useRef,useState,useCallback} from 'react';
 import { useNavigate } from "react-router-dom";
-import Btn from '../components/Btn.jsx';
+import Btn from '../../components/Btn.jsx';
 import './Login.css';
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
@@ -8,7 +8,7 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import {Alert,Snackbar} from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import { useDispatch } from 'react-redux';
-import { userLogin } from '../store/actions/productActions.js';
+import { userLogin } from '../../store/actions/productActions.js';
 function Login() {
     const [isVisible,setIsVisible] = useState(false);
     const [open, setOpen] = useState(false);

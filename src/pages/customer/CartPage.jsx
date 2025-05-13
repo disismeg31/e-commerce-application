@@ -3,7 +3,7 @@ import './CartPage.css'
 // import { SearchContext } from '../context/SearchContextProvider.jsx';
 import {useNavigate } from "react-router-dom"; 
 import { FaArrowLeft } from "react-icons/fa6";
-import CartItem from '../components/CartItem.jsx'
+import CartItem from '../../components/CartItem.jsx'
 import { useSelector} from 'react-redux';
 function CartPage() {
   //using redux
