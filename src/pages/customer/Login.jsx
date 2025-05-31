@@ -19,17 +19,34 @@ function Login() {
     const dispatch =  useDispatch()
 
     const handleLoginClick = useCallback(() => {
-        if(usernameInputElement.current.value === "meg@123" && passwordInputElement.current.value === "123"){
+         const email = usernameInputElement.current.value;
+         const password = passwordInputElement.current.value;
+        if(password === "123"){
+            let role = "customer";
+            if(email.includes("@admin")){
+                role = "admin";
+            }
+            else if(email.includes("@seller")){
+                role = "seller"
+            }
             // navigate("/home"); // Navigate to the home page
+            dispatch(userLogin({isLoggedIn:true,role}));
             setOpen(true);
             setTimeout(() => { 
-                navigate("/home"); // Navigate after showing the alert
+                if (role === "admin") {
+                        navigate("/admin");
+                } 
+                else if (role === "seller") {
+                        navigate("/seller");
+                } else {
+                        navigate("/home");
+                }
+                // navigate("/home"); // Navigate after showing the alert
             }, 1000); // 2-second delay
-            dispatch(userLogin(true));
+            
             console.log(usernameInputElement.current.value,passwordInputElement.current.value)
         }
         else{
-            
             alert('incorrect username👤 & password🔑');
             usernameInputElement.current.value="";
             passwordInputElement.current.value="";
@@ -53,7 +70,6 @@ function Login() {
             <span className='forgot-password' >forgot password?</span>
             </div>
             </div>  
-
             <Snackbar open={open} autoHideDuration={2000} onClose={() => setOpen(false)} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
                 <Alert icon={<CheckIcon fontSize="inherit" />}  severity="success">
                  Login successful.

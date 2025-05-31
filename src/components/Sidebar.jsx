@@ -20,7 +20,7 @@ function Sidebar({isSidebarCollapsed}) {
 
     // Clear all session storage data
     // sessionStorage.clear();
-    dispatch(userLogin(false))
+    dispatch(userLogin({isLoggedIn:false}))
     nav('/')
    }
   return (

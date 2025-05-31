@@ -3,7 +3,10 @@ const initialState = {
     cartItems:[],
     cartCount:0,
     totalAmount:0,
-    user:false,
+    user:{
+        isLoggedIn:false,
+        role:""
+    } 
 }
 
 
@@ -91,7 +94,11 @@ switch(action.type){
     case 'SET_USER_LOGIN':
          return{
             ...state,
-            user:action.payload
+            user:{
+                ...state.user,
+                isLoggedIn:action.payload.isLoggedIn,
+                role:action.payload.role
+            }
          }
 
     default:

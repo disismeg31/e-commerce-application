@@ -10,13 +10,13 @@ function Layout() {
   const { themeName } = useContext(ThemeContext);
   const [isSidebarCollapsed, setSidebarCollapsed] = useState(window.innerWidth <= 768);
 
-  useEffect(() => {
-    // If no user is logged in, redirect to login
-    const isLoggedIn = true;  
-    if (!isLoggedIn) {
-      navigate("/login");
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   // If no user is logged in, redirect to login
+  //   const isLoggedIn = true;  
+  //   if (!isLoggedIn) {
+  //     navigate("/login");
+  //   }
+  // }, [navigate]);
 
   useEffect(() => {
     document.body.className = themeName;
